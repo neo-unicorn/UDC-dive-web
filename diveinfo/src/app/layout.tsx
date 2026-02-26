@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import './globals.css';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'UDC DIVE - 探索海洋世界的无限可能',
@@ -14,13 +11,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="zh">
-      <body className="min-h-screen flex flex-col">
-        <Header locale="zh" />
-        <main className="flex-1">{children}</main>
-        <Footer locale="zh" />
-      </body>
-    </html>
-  );
+  return children;
 }

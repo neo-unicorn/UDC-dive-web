@@ -1,0 +1,93 @@
+{
+  "site": {
+    "name": "UDC DIVE",
+    "slogan": "Explore the Infinite Possibilities of the Ocean",
+    "description": "Professional diving information website offering diving training, travel destinations, underwater photography, marine life encyclopedia and more"
+  },
+  "nav": {
+    "home": "Home",
+    "training": "Training",
+    "destinations": "Destinations",
+    "photography": "Photography",
+    "marineLife": "Marine Life",
+    "gear": "Gear Guide",
+    "community": "Community",
+    "search": "Search..."
+  },
+  "home": {
+    "latestArticles": "Latest Articles",
+    "startLearning": "Start Learning",
+    "featured": "Featured",
+    "trainingCourses": "Training Courses",
+    "popularDestinations": "Popular Destinations",
+    "underwaterPhotography": "Underwater Photography",
+    "marineEncyclopedia": "Marine Life Encyclopedia",
+    "gearGuide": "Diving Gear Guide",
+    "popularTags": "Popular Tags",
+    "joinCommunity": "Join Our Community",
+    "newsletter": "Subscribe to our newsletter for the latest diving news, course offers and travel guides",
+    "subscribe": "Subscribe Now",
+    "emailPlaceholder": "Enter your email"
+  },
+  "courses": {
+    "openWater": {
+      "title": "Open Water Diver",
+      "description": "Begin your diving journey with a globally recognized certification",
+      "features": ["Theory & pool training", "4 open water dives", "Lifetime certification"]
+    },
+    "advanced": {
+      "title": "Advanced Open Water",
+      "description": "Enhance your skills and explore specialized diving areas",
+      "features": ["Deep & navigation specialties", "5 specialty training dives", "Multiple elective courses"]
+    },
+    "rescue": {
+      "title": "Rescue Diver",
+      "description": "Become a responsible and safety-conscious diver",
+      "features": ["Emergency response skills", "Scenario-based training", "Self-rescue & buddy rescue"]
+    }
+  },
+  "destinations": {
+    "maldives": {
+      "name": "Maldives",
+      "description": "World-class diving resort with abundant marine life and crystal clear waters"
+    },
+    "rajaAmpat": {
+      "name": "Raja Ampat, Indonesia",
+      "description": "The most biodiverse marine region on Earth, a diver's ultimate dream"
+    },
+    "cozumel": {
+      "name": "Cozumel, Mexico",
+      "description": "Caribbean gem with crystal clear waters and spectacular underwater terrain"
+    },
+    "redSea": {
+      "name": "Red Sea, Egypt",
+      "description": "Historic diving destination, perfect blend of wreck diving and coral reefs"
+    }
+  },
+  "marineLife": {
+    "reefFish": { "name": "Reef Fish", "description": "Discover colorful tropical fish species" },
+    "cephalopods": { "name": "Cephalopods", "description": "The intelligent world of octopus and squid" },
+    "corals": { "name": "Corals & Invertebrates", "description": "Builders of the reef ecosystem" },
+    "sharks": { "name": "Sharks & Rays", "description": "The true nature of ocean apex predators" },
+    "turtles": { "name": "Sea Turtle Conservation", "description": "Protecting endangered sea turtles" },
+    "mammals": { "name": "Marine Mammals", "description": "The fascinating lives of dolphins and whales" }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "minutes": "min read",
+    "articles": "articles"
+  },
+  "footer": {
+    "training": "Training",
+    "destinations": "Destinations",
+    "photography": "Photography",
+    "about": "About Us",
+    "contact": "Contact",
+    "partners": "Partners",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "Explore the ocean, discover wonders"
+  }
+}

@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 import { verifyApiKey } from '@/lib/auth';
 import { generateSlug, extractExcerpt, countWords, calculateReadingTime } from '@/lib/utils';
+import { notifyOpenClaw } from '@/lib/openclaw';
 import type { ArticleListResponse, CreateArticleResponse, ErrorResponse } from '@/types/api';
 
 export async function GET(request: NextRequest): Promise<NextResponse<ArticleListResponse | ErrorResponse>> {
@@ -28,7 +29,12 @@ export async function POST(request: NextRequest): Promise<NextResponse<CreateArt
         const body = await request.json();
         if (!body.title || !body.content) return NextResponse.json({ error: 'Title and content required' }, { status: 400 });
         const locale = body.locale || 'zh';
-        const article = await prisma.article.create({ data: { slug: generateSlug(body.title, locale), locale, title: body.title, content: body.content, excerpt: extractExcerpt(body.content), wordCount: countWords(body.content), readingTime: calculateReadingTime(body.content), published: body.published || false, publishedAt: body.published ? new Date() : null, ...(body.categorySlug && { category: { connect: { slug: body.categorySlug } } }) } });
+        const excerpt = extractExcerpt(body.content);
+        const article = await prisma.article.create({ data: { slug: generateSlug(body.title, locale), locale, title: body.title, content: body.content, excerpt, wordCount: countWords(body.content), readingTime: calculateReadingTime(body.content), published: body.published || false, publishedAt: body.published ? new Date() : null, ...(body.categorySlug && { category: { connect: { slug: body.categorySlug } } }) } });
+        // 发布文章时异步推送 OpenClaw（不阻塞响应）
+        if (body.published) {
+            notifyOpenClaw({ id: article.id, slug: article.slug, locale, title: body.title, excerpt, publishedAt: article.publishedAt?.toISOString() ?? null }).catch(() => { });
+        }
         return NextResponse.json({ id: article.id, slug: article.slug, message: 'Created' }, { status: 201 });
     } catch { return NextResponse.json({ error: 'Failed to create article' }, { status: 500 }); }
 }

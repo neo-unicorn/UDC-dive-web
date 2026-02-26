@@ -1,0 +1,93 @@
+{
+  "site": {
+    "name": "UDC DIVE",
+    "slogan": "探索海洋世界的无限可能",
+    "description": "专业潜水资讯网站，提供潜水培训、旅行目的地、水下摄影、海洋生物百科等内容"
+  },
+  "nav": {
+    "home": "首页",
+    "training": "培训课程",
+    "destinations": "旅行目的地",
+    "photography": "水下摄影",
+    "marineLife": "海洋生物",
+    "gear": "装备指南",
+    "community": "社区",
+    "search": "搜索..."
+  },
+  "home": {
+    "latestArticles": "最新文章",
+    "startLearning": "开始学习",
+    "featured": "精选推荐",
+    "trainingCourses": "培训课程",
+    "popularDestinations": "热门旅行目的地",
+    "underwaterPhotography": "水下摄影精选",
+    "marineEncyclopedia": "海洋生物百科",
+    "gearGuide": "潜水装备指南",
+    "popularTags": "热门标签",
+    "joinCommunity": "加入我们的社区",
+    "newsletter": "订阅 Newsletter，获取最新的潜水资讯、课程优惠和旅行攻略",
+    "subscribe": "立即订阅",
+    "emailPlaceholder": "输入您的邮箱"
+  },
+  "courses": {
+    "openWater": {
+      "title": "开放水域潜水员",
+      "description": "开启你的潜水之旅，获得全球认可的潜水证书",
+      "features": ["理论课程与泳池训练", "4次开放水域潜水", "终身有效认证"]
+    },
+    "advanced": {
+      "title": "进阶开放水域",
+      "description": "提升技能，探索专业潜水领域",
+      "features": ["深潜与导航专长", "5次专业训练潜水", "选修多种专业课程"]
+    },
+    "rescue": {
+      "title": "救援潜水员",
+      "description": "成为一名有责任心的潜水员",
+      "features": ["应急处理与救援技能", "情景模拟训练", "自救与救人能力"]
+    }
+  },
+  "destinations": {
+    "maldives": {
+      "name": "马尔代夫",
+      "description": "世界顶级潜水度假胜地，拥有丰富的海洋生物和清澈的海水"
+    },
+    "rajaAmpat": {
+      "name": "印尼四王岛",
+      "description": "地球上海洋生物多样性最高的区域，潜水员的终极梦想"
+    },
+    "cozumel": {
+      "name": "墨西哥科苏梅尔",
+      "description": "加勒比海明珠，清澈的海水和壮观的水下地形"
+    },
+    "redSea": {
+      "name": "埃及红海",
+      "description": "历史悠久的潜水圣地，沉船探险与珊瑚礁的完美结合"
+    }
+  },
+  "marineLife": {
+    "reefFish": { "name": "珊瑚礁鱼类", "description": "认识五彩缤纷的热带鱼类" },
+    "cephalopods": { "name": "头足类动物", "description": "章鱼、乌贼的智慧世界" },
+    "corals": { "name": "珊瑚与无脊椎", "description": "珊瑚礁生态系统的建设者" },
+    "sharks": { "name": "鲨鱼与鳐鱼", "description": "海洋顶级掠食者的真实面貌" },
+    "turtles": { "name": "海龟保护", "description": "关注濒危海龟的生存现状" },
+    "mammals": { "name": "海洋哺乳动物", "description": "海豚、鲸鱼的精彩生活" }
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "readMore": "阅读更多",
+    "viewAll": "查看全部",
+    "minutes": "分钟阅读",
+    "articles": "篇文章"
+  },
+  "footer": {
+    "training": "培训课程",
+    "destinations": "旅行目的地",
+    "photography": "摄影技巧",
+    "about": "关于我们",
+    "contact": "联系方式",
+    "partners": "合作伙伴",
+    "privacy": "隐私政策",
+    "terms": "用户协议",
+    "copyright": "探索海洋，发现精彩"
+  }
+}

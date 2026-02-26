@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export interface HeaderProps {
@@ -69,9 +70,12 @@ export function Header({ locale }: HeaderProps) {
             </div>
 
             {/* Language Switcher */}
-            <button className="text-sm text-slate-600 hover:text-sky-600 font-medium">
+            <Link 
+              href={locale === 'zh' ? '/en' : '/'}
+              className="text-sm text-slate-600 hover:text-sky-600 font-medium"
+            >
               {locale === 'zh' ? 'EN' : '中文'}
-            </button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button

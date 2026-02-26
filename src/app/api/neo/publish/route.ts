@@ -6,6 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 import { verifyApiKey } from '@/lib/auth';
 import { generateSlug, extractExcerpt, countWords, calculateReadingTime } from '@/lib/utils';
+import { notifyOpenClaw } from '@/lib/openclaw';
 import type { ErrorResponse } from '@/types/api';
 
 /**
@@ -132,6 +133,21 @@ export async function POST(request: NextRequest): Promise<NextResponse<NeoPublis
         // 构建文章 URL
         const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
         const articleUrl = `${baseUrl}/${locale}/articles/${slug}`;
+
+        // Neo 工作流发布时异步推送 OpenClaw（不阻塞响应）
+        if (published) {
+            notifyOpenClaw({
+                id: article.id,
+                slug: article.slug,
+                locale,
+                title: body.title,
+                excerpt,
+                coverImage: body.coverImage,
+                publishedAt: article.publishedAt?.toISOString() ?? null,
+                readingTime,
+                wordCount,
+            }).catch(() => { });
+        }
 
         return NextResponse.json({
             success: true,
